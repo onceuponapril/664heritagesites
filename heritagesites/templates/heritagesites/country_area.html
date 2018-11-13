@@ -1,0 +1,35 @@
+{% extends 'heritagesites/base.html' %}
+
+<!-- <article> -->
+
+  {% block content %}
+  <header>
+    <h2>UNESCO Heritage Sites Country areas</h2>
+  </header>
+  {% if user.is_authenticated %}
+
+  {% include 'pagination.html' %}
+
+
+{% if countries %}
+
+  <ul>
+
+  {% for country in countries %}
+    <li><a href="{% url 'country_area_detail' country.pk %}">{{ country.country_area_name | safe }}</a></li>
+  {% endfor %}
+
+  </ul>
+
+{% else %}
+  <p>No countries are available to view.</p>
+{% endif %}
+
+<p>page count: {{ countries.count }}</p>
+
+{% else %}
+  <a href="{% url 'login' %}">Log in</a>
+{% endif %}
+
+{% endblock content %}}
+<!-- </article> -->

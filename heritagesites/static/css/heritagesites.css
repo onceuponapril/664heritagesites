@@ -1,0 +1,17 @@
+body {
+    background-color: #97CAEF; /* start here */
+}
+nav{
+  background-color:#FC4445;
+}
+footer{
+  background-color:#55BCC9;
+}
+/* li{
+  background-color:#3FEEE6;
+} */
+/* example: comment out padding */
+.container-fluid {
+    background-color: transparent;
+    /* padding: 0.5rem 0.5rem; */
+}
