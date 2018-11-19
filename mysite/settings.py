@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'heritagesites.apps.HeritagesitesConfig',
     'crispy_forms',
     'social_django',
+    'django_filters',
     'test_without_migrations',
 ]
 
