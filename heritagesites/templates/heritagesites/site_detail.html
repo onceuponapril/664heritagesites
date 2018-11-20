@@ -37,7 +37,7 @@
     </div>
     {% endif %}
 
-    {% if site.sub_region_name %}
+    {% if site.sub_region_names %}
    <div class="row">
      <div class="col-sm-2">
        <p>Sub Region</p>
@@ -119,8 +119,17 @@
            {% endspaceless %}
          </div>
        </div> -->
+       {% if site.country_area_names %}
+      <div class="row">
+        <div class="col-sm-2">
+          <p>Country/Area</p>
+        </div>
+        <div class="col-sm-10">
+          <p>{{ site.country_area_names }}</p>
+        </div>
+      </div>
+      {% endif %}
 
-     {% endif %}
 
      {% if site.heritage_site_category.category_name %}
        <div class="row">
@@ -202,4 +211,5 @@
          </div>
        </div>
      {% endif %}
+{% endif %}
    {% endblock content %}

@@ -7,7 +7,7 @@ from .models import HeritageSite,CountryArea,HeritageSiteJurisdiction
 from .forms import HeritageSiteForm
 from django.urls import reverse_lazy
 from django_filters.views import FilterView
-from filters import HeritageSiteFilter 
+from heritagesites.filters import HeritageSiteFilter
 
 def index(request):
 	return HttpResponse("Hello, world. You're at the UNESCO Heritage Sites index page.")

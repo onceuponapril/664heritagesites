@@ -17,13 +17,12 @@
     <div class="col-sm-9">
       {% for site in object_list %}
         <h4><a href="{% url 'site_detail' site.pk %}">{{site.site_name}}</a></h4>
-        <!-- {% if site.country_area_name %} -->
 
-
-<h1>{{ site.country_area_names}}</h1>
-
+        {% if site %}
+         {{ site.country_area_names}}
+        {% endif %}
         <!-- add the country_area_names and description template tags -->
-        <!-- {% endif %} -->
+
         {% if site.description %}
         {{ site.description | safe}}
         {% endif %}
